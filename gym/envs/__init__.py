@@ -339,6 +339,33 @@ register(
     },
 )
 
+# Soccer
+# ----------------------------------------
+
+register(
+    id='Soccer-v0',
+    entry_point='gym.envs.soccer:SoccerEnv',
+    timestep_limit=1000,
+    reward_threshold=1.0,
+    nondeterministic=True,
+)
+
+register(
+    id='SoccerEmptyGoal-v0',
+    entry_point='gym.envs.soccer:SoccerEmptyGoalEnv',
+    timestep_limit=1000,
+    reward_threshold=10.0,
+    nondeterministic=True,
+)
+
+register(
+    id='SoccerAgainstKeeper-v0',
+    entry_point='gym.envs.soccer:SoccerAgainstKeeperEnv',
+    timestep_limit=1000,
+    reward_threshold=8.0,
+    nondeterministic=True,
+)
+
 # Debugging
 # ----------------------------------------
 
